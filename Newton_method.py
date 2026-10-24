@@ -8,9 +8,9 @@ def newton_method(f,df,x0,tol,max_iter):
     func_values = np.array([])
     step_size = np.array([])
     while error > tol and i < max_iter:
-        if df(x) ==0:
-            print("Newton method doesn't exists")
-            return None
+        if abs(df(x)) < tol: # need to check the derivative near to zero
+            print("The derivative is closing to zero or is zero") # Needs to be checked for zero or non-zero
+            return x, approx, func_values, step_size      #storing the partial data
         x_new = x - f(x)/df(x)
         approx = np.append(approx,x_new)
         func_values = np.append(func_values,abs(f(x_new)))
