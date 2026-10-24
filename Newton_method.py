@@ -16,9 +16,9 @@ def newton_method(f,df,x0,tol,max_iter):
     return x 
 
 def f(x):
-    return x**2 -2
+    return 6*x**3 +3
 def df(x):
-    return 2*x
+    return 18*x**2 
 
 root = newton_method(f,df,1,1e-6,50)
 print(root)
