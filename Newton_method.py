@@ -4,6 +4,9 @@ def newton_method(f,df,x0,tol,max_iter):
     i = 0
     x_new = x - f(x)/df(x)
     error = abs(x_new-x)
+    approx = np.array([])
+    func_values = np.array([])
+    step_size = np.array([])
     while error > tol and i < max_iter:
         if df(x) ==0:
             print("Newton method doesn't exists")
