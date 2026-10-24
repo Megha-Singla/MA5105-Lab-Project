@@ -20,7 +20,7 @@ def f(x):
 def df(x):
     return 18*x**2 
 
-root = newton_method(f,df,1,1e-6,50)
+root = newton_method(f,df,1,1e-6,150)
 print(root)
 
         
