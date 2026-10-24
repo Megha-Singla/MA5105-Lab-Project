@@ -23,7 +23,7 @@ def newton_method(f,df,x0,tol,max_iter):
         x = x_new
         i += 1
         print(i,x)
-        #print(approx)
+        #print(approx,func_values,step_size)
     if error <= tol:     # Iteration has reached the point to converge and it tells it converges.
         conv = True
         print("Converged")
