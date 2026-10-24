@@ -13,7 +13,7 @@ def newton_method(f,df,x0,tol,max_iter):
             return None
         x_new = x - f(x)/df(x)
         approx = np.append(approx,x_new)
-        func_values = np.append(func_values,f(x_new))
+        func_values = np.append(func_values,abs(f(x_new)))
         step_size = np.append(step_size,abs(x_new-x))
         error = abs(x_new-x)
         x = x_new
