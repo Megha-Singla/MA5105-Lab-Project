@@ -1,6 +1,6 @@
 import numpy as np
 import import_ipynb
-from diagnostics1 import validate_newton_inputs, check_derivative, check_stop
+from diagnostics import validate_newton_inputs, check_derivative, check_stop 
 def newton_method(f,df,x0,tol,max_iter):
     conv = False
     x = x0
