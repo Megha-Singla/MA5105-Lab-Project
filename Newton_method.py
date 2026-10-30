@@ -18,7 +18,7 @@ def newton_method(f,df,x0,tol,max_iter):
         approx = np.append(approx,x_new)
         func_values = np.append(func_values,abs(f(x_new)))
         step_size = np.append(step_size,abs(x_new-x))
-
+        #print(approx)
         error = abs(x_new-x)
         x = x_new
         i += 1
